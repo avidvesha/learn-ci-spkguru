@@ -70,18 +70,40 @@ class MSubKriteria extends CI_Model{
         // $this->db->update($this->getTable(), $data);
         // return $this->db->affected_rows();
 
-        $data = [
-            array(
-                array('subKriteria' => $this->input->post('itemKriteria1', true), 'value' => 1),
-                array('subKriteria' => $this->input->post('itemKriteria2', true), 'value' => 2),
-                array('subKriteria' => $this->input->post('itemKriteria3', true), 'value' => 3),
-                array('subKriteria' => $this->input->post('itemKriteria4', true), 'value' => 4),
-                array('subKriteria' => $this->input->post('itemKriteria5', true), 'value' => 5)
-            )
-        ];
+        // $data = [
+        //     array(
+        //         array('subKriteria' => $this->input->post('itemKriteria1', true), 'value' => 1),
+        //         array('subKriteria' => $this->input->post('itemKriteria2', true), 'value' => 2),
+        //         array('subKriteria' => $this->input->post('itemKriteria3', true), 'value' => 3),
+        //         array('subKriteria' => $this->input->post('itemKriteria4', true), 'value' => 4),
+        //         array('subKriteria' => $this->input->post('itemKriteria5', true), 'value' => 5)
+        //     )
+        // ];
 
+        $itemKriteria1 = $this->input->post('itemKriteria1', true);
         $this->db->where('kdKriteria', $this->input->post('kdKriteria'));
-        $this->db->update('subkriteria', $data);
+        $this->db->where('value', 1);
+        $this->db->update('subkriteria', $itemKriteria1);
+
+        $itemKriteria2 = $this->input->post('itemKriteria2', true);
+        $this->db->where('kdKriteria', $this->input->post('kdKriteria'));
+        $this->db->where('value', 2);
+        $this->db->update('subkriteria', $itemKriteria2);
+
+        $itemKriteria3 = $this->input->post('itemKriteria3', true);
+        $this->db->where('kdKriteria', $this->input->post('kdKriteria'));
+        $this->db->where('value', 3);
+        $this->db->update('subkriteria', $itemKriteria3);
+
+        $itemKriteria4 = $this->input->post('itemKriteria4', true);
+        $this->db->where('kdKriteria', $this->input->post('kdKriteria'));
+        $this->db->where('value', 4);
+        $this->db->update('subkriteria', $itemKriteria4);
+        
+        $itemKriteria5 = $this->input->post('itemKriteria5', true);
+        $this->db->where('kdKriteria', $this->input->post('kdKriteria'));
+        $this->db->where('value', 5);
+        $this->db->update('subkriteria', $itemKriteria5);
     }
 
     public function delete($id)

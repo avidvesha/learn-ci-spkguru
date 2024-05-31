@@ -127,14 +127,14 @@ class Kriteria extends MY_Controller
         //     'itemKriteria5' => $this->MSubKriteria->getSubkriteriaVal(5, $id), 
         // ];    
 
-        $this->form_validation->set_rules('kriteria', '', 'trim|required');
-        $this->form_validation->set_rules('sifat', '', 'trim|required');
-        $this->form_validation->set_rules('bobot', '', 'trim|required');
-        $this->form_validation->set_rules('itemKriteria1', '', 'trim|required');
-        $this->form_validation->set_rules('itemKriteria2', '', 'trim|required');
-        $this->form_validation->set_rules('itemKriteria3', '', 'trim|required');
-        $this->form_validation->set_rules('itemKriteria4', '', 'trim|required');
-        $this->form_validation->set_rules('itemKriteria5', '', 'trim|required');
+        $this->form_validation->set_rules('kriteria', '', 'required');
+        $this->form_validation->set_rules('sifat', '', 'required');
+        $this->form_validation->set_rules('bobot', '', 'required');
+        $this->form_validation->set_rules('itemKriteria1', '', 'required');
+        $this->form_validation->set_rules('itemKriteria2', '', 'required');
+        $this->form_validation->set_rules('itemKriteria3', '', 'required');
+        $this->form_validation->set_rules('itemKriteria4', '', 'required');
+        $this->form_validation->set_rules('itemKriteria5', '', 'required');
 
         if ($this->form_validation->run() == false) {
             loadPage('kriteria/ubah', $data);

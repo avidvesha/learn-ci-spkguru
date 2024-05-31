@@ -89,10 +89,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger"
-                        onclick="hapus_guru(<?php echo $item->kdGuru; ?>)">
-                    Hapus
-                </button>
+                <a 
+                class="btn btn-danger"
+                href="<?php echo site_url('guru/hapus/' . $item->kdGuru) ?>"
+                role="button">Hapus
+                </a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

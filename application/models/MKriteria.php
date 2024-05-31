@@ -62,7 +62,7 @@ class MKriteria extends CI_Model{
         // return $this->db->affected_rows();
 
         $data = [
-            "guru" => $this->input->post('guru', true),
+            "kriteria" => $this->input->post('kriteria', true),
             "sifat" => $this->input->post('sifat', true),
             "bobot" => $this->input->post('bobot', true)
         ];

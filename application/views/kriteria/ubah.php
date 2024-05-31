@@ -84,6 +84,10 @@
 
                 
                 <div class="form-group">
+                    <!-- <input 
+                      type="hidden" 
+                      name="kdSubkriteria" 
+                      value="<?php echo $itemKriteria1['kdSubkriteria'];?>"> -->
                     <?php echo form_label('Item Criteria :', '',array('class' => 'col-sm-2 control-label')) ?>
                     <div class="col-sm-9">
                       <input 
@@ -102,6 +106,7 @@
                         <p class="text-center">Value : 1</p>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <div class=" col-sm-offset-2 col-sm-9">
                       <input 

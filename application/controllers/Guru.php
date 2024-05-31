@@ -115,12 +115,13 @@ class Guru extends MY_Controller
         return $dataView;
     }
 
-    public function delete($id)
+    public function hapus($id)
     {
         if($this->MNilai->delete($id) == true){
             if($this->MGuru->delete($id) == true){
                 $this->session->set_flashdata('message','Berhasil menghapus data :)');
                 echo json_encode(array("status" => 'true'));
+                redirect('guru');
             }
         }
     }
