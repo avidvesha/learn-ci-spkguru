@@ -62,6 +62,32 @@
                                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Hapus
                                     </button>
 
+                                    <div class="modal fade" tabindex="-1" role="dialog" id="modalDelete">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                            aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title">Konfirmasi hapus data</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah anda yakin menghapus data ini ? </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <a 
+                                                    class="btn btn-danger"
+                                                    href="<?php echo site_url('kriteria/hapus/' . $item->kdKriteria) ?>"
+                                                    role="button">Hapus
+                                                    </a>
+                                                    <!-- <button type="button" class="btn btn-danger" onclick="hapus_kriteria(<?php echo $item->kdKriteria; ?>)">
+                                                        Hapus
+                                                    </button> -->
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+
                                 </td>
                             </tr>
                         <?php } ?>
@@ -193,26 +219,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="modal fade" tabindex="-1" role="dialog" id="modalDelete">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Konfirmasi hapus data</h4>
-            </div>
-            <div class="modal-body">
-                <p>Apakah anda yakin menghapus data ini ? </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger" onclick="hapus_kriteria(<?php echo $item->kdKriteria; ?>)">
-                    Hapus
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
 
 
 <!-- Bootstrap modal -->

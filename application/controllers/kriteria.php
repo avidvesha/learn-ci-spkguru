@@ -230,12 +230,13 @@ class Kriteria extends MY_Controller
         }
     }
 
-    public function delete($id)
+    public function hapus($id)
     {
         if($this->MSubKriteria->delete($id) == true){
             if($this->MKriteria->delete($id) == true){
                 $this->session->set_flashdata('message','Berhasil menghapus data :)');
                 echo json_encode(array("status" => 'true'));
+                redirect('kriteria');
             }
         }
     }
